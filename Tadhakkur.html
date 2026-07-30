@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tadhakkur — Privacy Policy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #F4F0E6;
+            --bg-deep: #EFEADD;
+            --text: #2B2721;
+            --text-mid: #6B6355;
+            --text-light: #9A9182;
+            --accent-tone: #8A6D3B;
+            --accent-soft: rgba(138, 109, 59, 0.07);
+            --border: #E0D9C8;
+            --border-light: #E9E3D5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Outfit', -apple-system, sans-serif;
+            font-weight: 400;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Subtle grain */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            opacity: 0.025;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-size: 128px 128px;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 80px 32px 120px;
+        }
+
+        /* Header */
+        .header {
+            margin-bottom: 64px;
+            opacity: 0;
+            animation: fadeUp 0.8s ease-out 0.1s forwards;
+        }
+
+        .mark {
+            width: 34px;
+            height: 34px;
+            margin-bottom: 14px;
+        }
+
+        .logo {
+            font-family: 'Instrument Serif', serif;
+            font-size: 30px;
+            color: var(--text);
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .header-line {
+            width: 36px;
+            height: 1px;
+            background: var(--border);
+            margin: 24px 0;
+        }
+
+        h1 {
+            font-family: 'Instrument Serif', serif;
+            font-weight: 400;
+            font-size: clamp(36px, 6vw, 48px);
+            color: var(--text);
+            line-height: 1.15;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+
+        .effective-date {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 48px;
+            opacity: 0;
+            animation: fadeUp 0.6s ease-out forwards;
+        }
+
+        .section:nth-child(2) { animation-delay: 0.15s; }
+        .section:nth-child(3) { animation-delay: 0.2s; }
+        .section:nth-child(4) { animation-delay: 0.25s; }
+        .section:nth-child(5) { animation-delay: 0.3s; }
+        .section:nth-child(6) { animation-delay: 0.35s; }
+        .section:nth-child(7) { animation-delay: 0.4s; }
+        .section:nth-child(8) { animation-delay: 0.45s; }
+        .section:nth-child(9) { animation-delay: 0.5s; }
+        .section:nth-child(10) { animation-delay: 0.55s; }
+        .section:nth-child(11) { animation-delay: 0.6s; }
+        .section:nth-child(12) { animation-delay: 0.65s; }
+
+        h2 {
+            font-family: 'Instrument Serif', serif;
+            font-weight: 400;
+            font-size: 26px;
+            color: var(--text);
+            margin-bottom: 16px;
+            letter-spacing: -0.3px;
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--text-mid);
+            margin-bottom: 14px;
+            font-weight: 300;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        strong {
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        a {
+            color: var(--accent-tone);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(138, 109, 59, 0.2);
+            transition: border-color 0.3s ease;
+        }
+
+        a:hover {
+            border-color: var(--accent-tone);
+        }
+
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: var(--border);
+            margin: 48px 0;
+        }
+
+        /* Summary card */
+        .summary-card {
+            background: var(--accent-soft);
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            padding: 28px 28px;
+            margin-bottom: 48px;
+            opacity: 0;
+            animation: fadeUp 0.6s ease-out 0.12s forwards;
+        }
+
+        .summary-card p {
+            font-size: 15px;
+            color: var(--text-mid);
+            margin-bottom: 0;
+            font-weight: 400;
+        }
+
+        .summary-label {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--accent-tone);
+            margin-bottom: 12px;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 80px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+            opacity: 0;
+            animation: fadeUp 0.6s ease-out 0.6s forwards;
+        }
+
+        .footer p {
+            font-size: 13px;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        .footer .logo {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .footer .mark {
+            width: 22px;
+            height: 22px;
+            margin-bottom: 10px;
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .container {
+                padding: 48px 24px 80px;
+            }
+            .header {
+                margin-bottom: 48px;
+            }
+            h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <svg class="mark" viewBox="0 0 100 100" fill="none" stroke="#8A6D3B" stroke-width="4" aria-hidden="true">
+                <rect x="24" y="24" width="52" height="52"/>
+                <rect x="24" y="24" width="52" height="52" transform="rotate(45 50 50)"/>
+            </svg>
+            <div class="logo">Tadhakkur</div>
+            <div class="header-line"></div>
+            <h1>Privacy Policy</h1>
+            <div class="effective-date">Effective August 1, 2026</div>
+        </div>
+
+        <div class="summary-card">
+            <div class="summary-label">In short</div>
+            <p>Tadhakkur collects nothing. There is no account, no analytics and no tracking. Everything you set or save stays on your device, and the app works entirely offline.</p>
+        </div>
+
+        <div class="section">
+            <h2>About Tadhakkur</h2>
+            <p>Tadhakkur is a daily Qur'anic reminder app. It shows one verse each day in Arabic with an English translation, lets you browse verses by theme, save the ones that stay with you, and share them as an image.</p>
+            <p>Tadhakkur is developed and published by SalkaNueve. This privacy policy explains how we handle your information when you use the app.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <h2>Data we collect</h2>
+            <p><strong>We do not collect any personal data.</strong> Everything you enter into Tadhakkur — your name, the themes you choose, your reminder time and the verses you save — is stored exclusively on your device.</p>
+            <p>We have no servers, no databases and no analytics infrastructure. We have no way to read your data, even if we wanted to.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <h2>Information stored on your device</h2>
+            <p>The following is stored locally and is never transmitted anywhere:</p>
+            <p><strong>Your name.</strong> Optional, and used only to greet you on the main screen.</p>
+            <p><strong>Your preferences.</strong> The themes you would like to be reminded of, your reminder time, your chosen visual theme, and the focus setting if you use it.</p>
+            <p><strong>Saved verses.</strong> Stored using Apple's SwiftData framework. Only the reference is kept — the verse text always comes from inside the app.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <h2>The app works offline</h2>
+            <p>Tadhakkur makes no network requests while you use it. Every verse is already inside the app when you download it, and the daily reminder is worked out on your device from the date alone.</p>
+            <p>This means the app never sends a request that could reveal what you are reading, when you open it, or where you are.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <h2>Notifications</h2>
+            <p>If you turn on the daily reminder, Tadhakkur schedules local notifications on your device. These are handled entirely by iOS and are never routed through any external server. We do not use push notifications and do not receive notification tokens.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <h2>Widget</h2>
+            <p>The home screen widget shows the shared daily verse. It works out which verse to show on your device, using nothing but the date. It does not read your preferences or your saved verses, and it makes no network requests.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <h2>Subscriptions and payments</h2>
+            <p>Tadhakkur offers an optional premium subscription processed entirely through Apple's App Store and StoreKit framework. We do not process, store or have access to any payment information, card numbers or Apple Account details.</p>
+            <p>Apple tells us only whether a subscription is currently active. Please refer to <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a> for how Apple handles your purchase data.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <h2>Third-party services</h2>
+            <p>Tadhakkur contains no third-party analytics, advertising, tracking or data collection software. No Firebase, no Google Analytics, no Facebook SDK, no attribution or crash-reporting services of any kind.</p>
+            <p>The only Apple frameworks involved are StoreKit for subscriptions and WidgetKit for the home screen widget, both of which run on your device.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <h2>Sharing</h2>
+            <p>When you share a verse, the image and text are handed to Apple's standard share sheet and go wherever you send them. We are not involved in that and receive no record of it.</p>
+            <p><strong>We do not share, sell, rent or trade your personal information with anyone.</strong></p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <h2>Data deletion</h2>
+            <p>Deleting the app removes everything it stored on your device. There is nothing held elsewhere for us to delete, and nothing to request from us.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <h2>Children's privacy</h2>
+            <p>Tadhakkur does not knowingly collect information from children under the age of 13. The app collects no information at all, and asks only for a first name, which is optional and used solely to personalise a greeting.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <h2>Changes to this policy</h2>
+            <p>We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated effective date. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <h2>Contact</h2>
+            <p>If you have questions about this privacy policy or the app, please contact us at:</p>
+            <p><a href="mailto:applikationskonsulten@gmail.com">applikationskonsulten@gmail.com</a></p>
+        </div>
+
+        <div class="footer">
+            <svg class="mark" viewBox="0 0 100 100" fill="none" stroke="#9A9182" stroke-width="4" aria-hidden="true">
+                <rect x="24" y="24" width="52" height="52"/>
+                <rect x="24" y="24" width="52" height="52" transform="rotate(45 50 50)"/>
+            </svg>
+            <div class="logo">Tadhakkur</div>
+            <p>Pause. Reflect. Remember.</p>
+            <p style="margin-top: 12px;">© 2026 Saleh Mustafa. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
